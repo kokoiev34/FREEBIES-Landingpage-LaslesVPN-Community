@@ -1,0 +1,69 @@
+.feedbacks{
+    overflow: hidden;
+}
+
+.feedbacks__title {
+  @include h3();
+  margin-bottom: 15px;
+}
+
+.feedbacks__subtitle {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 500px;
+  @include subtitle(center);
+}
+
+.feedbacks__cards {
+  display: flex;
+  margin-left: 20px;
+}
+
+.feedbacks__card {
+  height: 230px;
+  width: 400px;
+  background: #ffffff;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 40px;
+}
+
+.feedbacks__card:active {
+  border: 2px solid $secondary-color;
+}
+
+.feedbcaks__card-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+.feedbcaks__card-person-information {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.feedbacks__person-info {
+  flex-grow: 1;
+}
+
+.feedbcaks__card-name {
+  font-weight: bold;
+}
+
+.feedbacks__card-ratings {
+  display: flex;
+}
+
+.feedbacks__card-rating {
+  margin-right: 10px;
+}
+
+.feedbacks__card-feedback {
+  font-size: 22px;
+  padding: 10px;
+}

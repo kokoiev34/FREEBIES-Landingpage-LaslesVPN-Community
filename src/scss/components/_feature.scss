@@ -1,0 +1,56 @@
+.feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 60px 20px;
+}
+
+.feature__logo {
+  width: 500px;
+  height: 400px;
+  margin-left: 50px;
+}
+
+.feature__article {
+  max-width: 420px;
+}
+
+.feature__title {
+  @include h2(left);
+  margin-bottom: 15px;
+}
+
+.feature__subtitle {
+  @include subtitle(start);
+  margin-bottom: 10px;
+}
+
+.feature__example {
+  display: flex;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #4f5665;
+}
+
+.feature__check-mark {
+  margin-right: 15px;
+}
+
+// Media for Tablets and small desktops 992px
+@include lg {
+  .feature {
+    flex-wrap: wrap;
+  }
+  .feature__article {
+    margin: 0 auto;
+  }
+  .feature__title {
+    text-align: center;
+  }
+  .feature__subtitle {
+    text-align: center;
+  }
+  .feature_img {
+    margin: 0 auto;
+  }
+}

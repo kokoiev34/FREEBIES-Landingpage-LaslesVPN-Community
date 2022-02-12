@@ -1,0 +1,84 @@
+.nav {
+  @include flexible(space-between);
+  margin: 0 20px 60px 20px;
+  min-height: 120px;
+  font-size: 16px;
+}
+
+.nav__logo {
+  @include flexible(flex-start);
+}
+
+.nav_svg {
+  margin-right: 0.5rem;
+}
+
+.nav__logo-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: $primary-color;
+}
+
+.nav__mobile-menu {
+  display: none;
+}
+
+.nav__sections {
+  @include flexible(flex-start);
+}
+
+.nav__link {
+  font-size: 16px;
+  color: #4f5665;
+  margin: 0 10px;
+}
+
+.nav__login-tablets {
+  display: none;
+}
+
+.nav__login {
+  @include flexible(flex-start);
+}
+
+.nav__sign-in {
+  @include flexible(flex-start);
+
+  font-size: 16px;
+  margin: 0 25px;
+  color: $primary-color;
+}
+
+.nav__sign-up {
+  @include flexible(flex-start);
+
+  padding: 3px 15px;
+  font-size: 16px;
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+// Media Tablets and small desktops 992px
+@include lg {
+  .nav__login {
+    display: none;
+  }
+  .nav__login-tablets {
+    display: block;
+    margin-right: 30px;
+  }
+}
+
+// Small tablets 768px
+@include md {
+  .nav__sections,
+  .nav__login-tablets {
+    display: none;
+  }
+  .nav__mobile-menu {
+    display: block;
+  }
+}

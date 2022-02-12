@@ -1,0 +1,102 @@
+.offers {
+  margin-bottom: 70px;
+}
+
+.offers__title {
+  @include h3();
+  margin-bottom: 15px;
+}
+
+.offers__subtitle {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 500px;
+  @include subtitle(center);
+}
+
+.offers__plans {
+  @include flexible(center);
+}
+
+.offers__plan {
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+  height: 760px;
+  width: 330px;
+  border: 2px solid #dddddd;
+  background: #ffffff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.offers__plan-img {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 80px;
+  object-fit: cover;
+  width: 160px;
+  height: 180px;
+}
+
+.offers__plan-title {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  color: $primary-color;
+}
+
+.offers__plan-items {
+  flex-grow: 1;
+}
+
+.offers__plan-item {
+  margin: 10px 0;
+}
+
+// Changing li mark
+.offers__plan-items .offers__plan-item:before {
+  content: "✓";
+  margin-right: 10px;
+  color: green;
+}
+
+.offers__plan-price {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: $primary-color;
+}
+
+.btn-rounded {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 178px;
+  height: 45px;
+  border: 2px solid $secondary-color;
+  border-radius: 50px;
+  color: $secondary-color;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.offers__plan:hover {
+  border: 2px solid $secondary-color;
+  .btn-rounded {
+    color: white;
+    background-color: $secondary-color;
+  }
+}
+
+// Media for Small tablets 768px
+@include md {
+  .offers__plans {
+    display: block;
+  }
+  .offers__plan {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
